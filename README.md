@@ -43,21 +43,6 @@ the configured sensitive patterns, build/dependency folders, workspace
 `student-template/agent.py` before using a different curriculum or
 workspace layout.
 
-Suggested class/school notice:
-
-> While the Student Monitor agent is running in this class Codespace,
-> selected saved source and text files in your workspace are shared with
-> your teacher for live progress support. Secrets, common dependency and
-> build folders, ignored files, binary files, and oversized files are
-> excluded. The server keeps the current view in memory and does not run
-> your code. Please do not put passwords or personal information in
-> classwork files.
-
-The class code and teacher key are simple shared secrets. They are not
-individual accounts and should not be treated as strong authentication.
-The dashboard key is passed in the URL, so use it only on the teacher's
-Codespace and avoid sharing that URL.
-
 ## Local Development
 
 ```sh
@@ -65,11 +50,6 @@ export CLASS_CODE='local-class-code'
 export TEACHER_KEY='local-teacher-key'
 python3 server.py
 ```
-
-The dashboard uses Highlight.js and web fonts from public CDNs. Student
-file contents stay on the monitor server, but the browser needs access to
-those CDNs for syntax highlighting and the selected typefaces. Plain text
-remains readable if highlighting is unavailable.
 
 ## Deployment Checks
 

@@ -4,7 +4,7 @@
   "containerEnv": {
     "GITHUB_USER": "${localEnv:GITHUB_USER}",
     "CLASS_CODE": "${localEnv:CLASS_CODE}",
-    "SERVER_DISCOVERY_URL": "https://raw.githubusercontent.com/OWNER/monitor-server/main/server.json",
+    "SERVER_DISCOVERY_URL": "https://raw.githubusercontent.com/AuroraCollege/codespace-monitor/refs/heads/main/server.json",
     "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
   },
   "customizations": {
