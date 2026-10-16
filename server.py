@@ -120,7 +120,7 @@ class MonitorHandler(BaseHTTPRequestHandler):
         if self.path.split("?", 1)[0] != "/api/sync":
             self.send_error(404)
             return
-        class_code = os.environ.get("CLASS_CODE", "")
+        class_code = "AC27" #os.environ.get("CLASS_CODE", "")
         if not class_code or self.headers.get("X-Class-Code", "") != class_code:
             self.send_json(401, {"error": "invalid class code"})
             return
