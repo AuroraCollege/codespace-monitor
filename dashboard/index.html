@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <title>Student Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" referrerpolicy="no-referrer" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Student Monitor home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>studio<span class="brand-light"> / monitor</span></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="live-indicator"><span></span> LIVE SESSION</span>
+        <span class="clock" id="clock">--:--</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CLASSROOM / WORKSPACES</p>
+            <h1 id="overview-title">Student monitor</h1>
+          </div>
+          <div class="class-summary"><strong id="student-count">0</strong><span>students</span></div>
+        </div>
+        <div class="roster" id="roster" aria-label="Student overview"></div>
+        <div class="empty-state" id="empty-state">
+          <span class="empty-symbol" aria-hidden="true">↗</span>
+          <p>Waiting for workspaces</p>
+          <span>Students appear here when their Codespace agent connects.</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Student workspace">
+        <div class="student-tabs" id="student-tabs" role="tablist" aria-label="Students"></div>
+        <div class="student-panel" id="student-panel">
+          <div class="panel-empty">Select a student workspace to inspect their files.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span><span class="footer-mark"></span> LIVE FILE SYNC</span>
+      <span id="connection-state">Connecting to classroom...</span>
+    </footer>
+  </body>
+</html>

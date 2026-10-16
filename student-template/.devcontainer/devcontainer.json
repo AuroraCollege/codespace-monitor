@@ -1,0 +1,19 @@
+{
+  "name": "Student Workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "containerEnv": {
+    "GITHUB_USER": "${localEnv:GITHUB_USER}",
+    "CLASS_CODE": "${localEnv:CLASS_CODE}",
+    "SERVER_DISCOVERY_URL": "https://raw.githubusercontent.com/OWNER/monitor-server/main/server.json",
+    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000
+      }
+    }
+  },
+  "postStartCommand": "nohup python3 ${containerWorkspaceFolder}/agent.py >>/tmp/student-monitor-agent.log 2>&1 </dev/null &"
+}
